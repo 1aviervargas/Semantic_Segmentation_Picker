@@ -1,1 +1,1 @@
-# Segmantic_Segmentation_Picker
+# Semantic_Segmentation_Picker
