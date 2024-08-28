@@ -43,13 +43,13 @@ for idx = 1:length(imds.Files)
     s.xcoor = centroids(:,1)*downsampling;
     s.ycoor = centroids(:,2)*downsampling;
     
-    %WriteStarFileStruct(s,'particles_auto',str)
+    WriteStarFileStruct(s,'particles_auto',str)
 
-    figure(1), imagesc(I); colormap gray
-    hold on
-    plot(s.xcoor(:),s.ycoor(:),'or')
-    hold off
-    pause;
+    %figure(1), imagesc(I); colormap gray
+    %hold on
+    %plot(s.xcoor(:),s.ycoor(:),'or')
+    %hold off
+    %pause;
     
     clear s;
 end
