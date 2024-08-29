@@ -4,12 +4,8 @@ close all;
 %Load the network:
 load('results_training.mat');
 
-% Go to the project folder. Please, change this path to the place where
-% the folder 'IMAGES_FILTERED' is located.
-cd('/mnt/DATOS2/jvargas/ScipionUserData/projects/RNP_Vargas/Solo_Puntas')
-
 imDir1 = '/mnt/DATOS2/jvargas/ScipionUserData/projects/RNP_Vargas/Solo_Puntas/IMAGES_FILTERED/';
-imds = imageDatastore(imDir1,"FileExtensions",".png","ReadFcn",@(x)normy(x))
+imds = imageDatastore(imDir1,"FileExtensions", [".mrc",".jpg",".tif",".png"],"ReadFcn",@(x)normy(x))
 downsampling = 1;
 
 %%
