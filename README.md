@@ -12,7 +12,7 @@ The first recommended step to use **Semantic_Segmentation_Picker** is training t
 
 ### Network Training
 
-To train the network, use the script `script_matlab_training.m`. Please modify the variable `imDir1` (line 13) to point to the folder storing the downsampled micrographs and the variable `pxDir1` (line 15) to point to the folder storing the manually labeled images. Additionally, modify line 9 to the path where your MATLAB code is stored. If the image size is different from `[640 448] px`, please modify the `imageSize` parameter (line 50). After setting these folders and the image size correctly, run the script `script_matlab_training.m` to train the network. The network will be stored in the variable `net`, and all the results will be stored in the file `results_training.mat`.
+To train the network, use the script `script_matlab_training.m`. Please modify the variable `imDir1` (line 8) to point to the folder storing the downsampled micrographs and the variable `pxDir1` (line 10) to point to the folder storing the manually labeled images. If the image size is different from `[640 448] px`, please modify the `imageSize` parameter (line 45). After setting these folders and the image size correctly, run the script `script_matlab_training.m` to train the network. The network will be stored in the variable `net`, and all the results will be stored in the file `results_training.mat`.
 
 ### Evaluation of the Training
 
@@ -20,5 +20,4 @@ The evaluation of the model's segmentation predictions can be done using convent
 
 ### Automatic Picking of Micrographs
 
-The script `script_matlab_starfile.m` is responsible for generating the star files with the coordinates of the RNP ends. Before running the script, modify line 9 with the path where your MATLAB code is stored. Please modify the variables `imDir1` (line 11) to point to the folder storing the downsampled micrographs and the `downsampling` variable (line 13) with the downsampling factor applied to the images. Finally, modify line 38 with the path to the folder where you want to store the `.star` files (e.g., `POS_FILES_filtered`).
-
+The script `script_matlab_starfile.m` is responsible for generating the star files with the coordinates of the RNP ends. Please modify the variables `imDir1` (line 7) to point to the folder storing the downsampled micrographs and the `downsampling` variable (line 9) with the downsampling factor applied to the images. Finally, modify line 38 with the path to the folder where you want to store the `.star` files.
