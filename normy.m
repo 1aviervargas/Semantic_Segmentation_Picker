@@ -3,7 +3,13 @@ function x = normy(x)
 %normalization to quantiles 2% and 98% for contrast adjustment, clipping 
 %values outside the 0-1 range, resize to [640 448]px and add some noise.
 
-x = double(imread(x));
+[~, ~, ext] = fileparts(x);
+if strcmp(ext, “.mrc”)
+	x = double(ReadMRC(x));
+else
+	x = double(imread(x));
+end
+
 [sx sy] = size(x);
 pmin = 2;
 pmax = 98;
