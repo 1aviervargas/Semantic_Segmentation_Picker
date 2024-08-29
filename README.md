@@ -21,3 +21,22 @@ The evaluation of the model's segmentation predictions can be done using convent
 ### Automatic Picking of Micrographs
 
 The script `script_matlab_starfile.m` is responsible for generating the star files with the coordinates of the RNP ends. Please modify the variables `imDir1` (line 7) to point to the folder storing the downsampled micrographs and the `downsampling` variable (line 9) with the downsampling factor applied to the images. Finally, modify line 38 with the path to the folder where you want to store the `.star` files.
+
+## Example of use
+
+Please download the `IMAGES` folder at [https://zenodo.org/records/12922653](https://zenodo.org/records/12922653). This folder contains two folders (`IMAGES_FILTERED` and `SEGMENTED`) with the downsampled and manually segmented images.
+
+To train the network, change the variables `imDir1` and `pxDir1` in the script `script_matlab_training.m` and execute in the command line:
+
+`$ matlab -nodisplay -nosplash -r "script_matlab_training; exit"`
+
+To evaluate the training, execute in the command line:
+
+`$ matlab -nodisplay -nosplash -r "script_matlab_evaluation; exit"`
+
+Finally, to obtain the `.star` files, modify the `imDir1` variable and execute:
+
+`$ matlab -nodisplay -nosplash -r "script_matlab_starfile.m; exit"`
+
+
+
