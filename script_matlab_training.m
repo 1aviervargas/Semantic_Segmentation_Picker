@@ -2,11 +2,6 @@ clear all;
 close all;
 rng(0)
 
-% Go to the project folder. Please change this path to the place where the
-% folders 'IMAGES_FILTERED' and segmeted are placed in your system. Note
-% that his folders can be downloaded from:
-cd('/mnt/DATOS2/jvargas/ScipionUserData/projects/RNP_Vargas/Solo_Puntas')
-
 %% Train the Network:
 %---------------------------------------------------------------------------------------------------------------------------------------------------------
 %Folder where the preprocessed mics are placed:
